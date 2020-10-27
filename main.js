@@ -13,3 +13,11 @@ $(document).ready(function () {
     });
 
 });
+
+
+//Funzione scorrimento
+function turn(direction) {
+    var activeImg = $(".images img.active");  //seleziono la classe active sulle img
+    var activeCircle = $(".nav i.active");    //seleziono la classe active sulle i
+    
+}
