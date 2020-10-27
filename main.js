@@ -13,6 +13,21 @@ $(document).ready(function () {
         turn("prev");
     });
 
+
+    //CLICK CON LA TASTIERA
+    $(document).keydown(function (event) { 
+        console.log(event.keyCode); 
+        
+        //Turn left
+        if( event.keyCode == 37 ) {
+            turn("prev");
+        }
+        //Turn right
+        else if ( event.keyCode == 39 ){
+            turn("next");
+        }
+    });
+
 });
 
 
