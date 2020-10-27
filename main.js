@@ -3,11 +3,12 @@
 $(document).ready(function () {
 
     //CLICK AL MOUSE
+    //Next
     $(".next").click(function () { 
         turn("next");
     });
 
-
+    //Previous
     $(".prev").click(function () { 
         turn("prev");
     });
@@ -41,4 +42,15 @@ function turn(direction) {
         }
     }
 
+    //Previous: riassegno le classi nel momento in cui col click attivo l'evento
+    else if(direction === "prev") {
+        if(activeImg.hasClass("first")) {
+            $(".images img.last").addClass("active");
+            $(".nav i.last").addClass("active");
+        
+        } else {
+            activeImg.prev("img").addClass("active");
+            activeCircle.prev("i").addClass("active");
+        }
+    }
 }
